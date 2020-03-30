@@ -22,7 +22,7 @@ class VoteState with ChangeNotifier{
   String get selectedOptionInActiveVote => _selectedOptionInActiveVote;
 
   set activeVote(newValue){
-    _activeVote= newValue;
+    _activeVote = newValue;
     notifyListeners();
   }
 

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:voting_app/state/vote_start.dart';
 import 'package:voting_app/options/vote.dart';
 
+
 class VoteOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

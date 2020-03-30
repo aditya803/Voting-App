@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:voting_app/FirstPage.dart';
+import 'package:voting_app/state/vote_start.dart';
 
-void main()=> runApp(new MyApp());
+void main()=> runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => VoteState(),
+      )
+    ],
+  child: MyApp(),
+ )
+);
 
 class MyApp extends StatelessWidget {
   @override
@@ -22,6 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
